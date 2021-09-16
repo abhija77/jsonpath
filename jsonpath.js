@@ -5002,10 +5002,10 @@ JSONPath.prototype.nodes = function(obj, string, count) {
 
       if (index == path.length - 1) {
         // if we're through the components we're done
-        matches = matches.concat(results || []);
+        matches = matches.concat(results || [{value: ''}]);
       } else {
         // otherwise accumulate and carry on through
-        _partials = _partials.concat(results || []);
+        _partials = _partials.concat(results || [{}]);
       }
     });
 
